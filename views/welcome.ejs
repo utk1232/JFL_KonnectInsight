@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Welcome </title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <form method="POST" action="/orderlist">
+        <div class="container height-100 d-flex justify-content-center align-items-center">
+            <div class="position-relative">
+                <div class="card p-2 text-center cust_otp_card">
+                    <div class="welcome-message">
+                        <h3>Welcome to the Store</h3>
+                    </div>
+                    <br>
+                    <div class="phone-number-input">
+                        <div class="notify">
+                            <span>Please enter your customer number below</span>
+                        </div>
+                        <div id="phone" class="inputs d-flex flex-row justify-content-center mt-10">
+                            <!-- Adjusting the size with width, height, padding, and font-size -->
+                            <input class="m-2 text-center form-control rounded"
+                                type="tel"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                placeholder="Enter Phone Number"
+                                maxlength="10"
+                                required
+                                autocomplete="off"
+                                style="width: 250px; height: 50px; padding: 10px; font-size: 1.5rem;" />
+                        </div>
+                    </div>
+                    <div class="mt-4 verifyButton">
+                        <button class="btn px-4 validate btn-success cust_btn" type="submit">Proceed to Order List</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    
+    
+    
+    <script>
+        // function phoneNumberCheck() {
+        //     const phoneInput = document.querySelector('input[name="mobileNumber"]');
+        //     const phoneNumber = phoneInput.value;
+        //     localStorage.setItem('phoneNumber', phoneNumber);
+        // }
+
+  
+    </script>
+
+
+
+
+</body>
+
+</html>

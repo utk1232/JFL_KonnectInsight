@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>The 4 Cheese Pizza</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/the4CheesePizza.css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .subcategories-container {
+            display: flex;
+            gap: 34px;
+        }
+
+        .hlo {
+            font-size: 16px;
+            color: #666666;
+            font-weight: 600;
+        }
+
+        .hlo1 {
+            border: 1px solid #2B57A6;
+            margin-right: 32px;
+            padding: 7px 14px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 21px;
+        }
+
+        .sub {
+            font-size: 12px;
+            cursor: pointer;
+            border: 1px solid #2B57A6;
+            padding: 5px 21px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .sub {
+            display: flex;
+        }
+
+        .highlighted-category {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="the4pizza">
+        <div class="parent1">
+            <div class="inner-1">
+                <div style="width: 100%; text-align:right;"  >    <button class="btn btn-danger" type="button" onclick="logout()">Logout</button></div>
+                <p class="child-1">Please select what you want to give feedback for</p>
+                <div class="inner-2">
+                    <div class="inner-3">
+                        <p class="child-2"></p>
+                        <div class="inner-4">
+                            <div class="child-3">13 Jul 2023</div>
+                            <div class="child-3">₹1,671.00</div>
+                        </div>
+                    </div>
+                    <button class="child-4" onclick="backPage()">Back to Order Selection</button>
+                </div>
+                <div class="inner-5">
+                    <% if (orders.length> 0) { %>
+                        <ul class="ul">
+                            <% let count=0; %>
+                                <% for (let i=0; i < orders.length; i++) { %>
+                                    <% let data=orders[i]; %>
+                                        <div class="hlo">
+                                            <%= data.displayText %>
+                                        </div> <br>
+                                        <% let orderCategories=orders[i].categories; %>
+                                            <%let subcategories; %>
+                                                <% for (let j=0;j<orderCategories.length;j++){%>
+                                                    <span class="hlo1">
+                                                        <%= orderCategories[j].displayText %>
+                                                    </span>
+                                                    <% } %>
+                                                        <br>
+                                                        <hr style="margin-top: 2%;">
+                                                        <% for (let k=0; k < orderCategories.length; k++) { %>
+                                                            <div class="category" onclick="clickCategory()">
+                                                                <%= orderCategories[k].categoryName %>
+                                                            </div>
+
+                                                            <% subcategories=orderCategories[k].subCategories; %>
+                                                                <div class="subcategories-container"
+                                                                    id="subcategories-<%= k %>">
+                                                                    <% for (let y=0; y < subcategories.length; y++) { %>
+                                                                        <p class="subcategory<%= count %> allSubCategories sub"
+                                                                            style="display: none;"
+                                                                            onclick="handleClick(this)">
+                                                                            <%= subcategories[y].displayText %>
+                                                                        </p>
+                                                                     <% } %>
+                                                                            <% count++; %>
+                                                                </div>
+                                                                <% } %>
+                                                                    <br>
+                                                                    <% } %>
+                        </ul>
+                        <% } else { %>
+                            <p>No orders found.</p>
+                            <% } %>
+                </div>
+
+                <div class="inner-13" id="continueButton" onclick="feedbackPage()">
+                    <div class="inner-14">
+                        <div class="inner-15">Continue </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function clickCategory() {
+            let categories = document.querySelectorAll(".hlo1");
+            console.log(categories, "categories");
+            let currentlyVisibleSubcategory = null; // Variable to keep track of the currently visible subcategory
+            let previouslyClickedCategory = null; // Variable to keep track of the previously clicked category
+            let previouslyClickedSubcategory = null; // Variable to keep track of the previously clicked subcategory
+
+            for (let i = 0; i < categories.length; i++) {
+                categories[i].addEventListener('click', () => {
+                    let subcategories = document.querySelectorAll(`.subcategory${i}`);
+
+                    // Check if the clicked category is already highlighted
+                    if (categories[i] === previouslyClickedCategory) {
+                        // If yes, reset the background and hide subcategories
+                        categories[i].classList.remove('highlighted-category');
+                        for (let j = 0; j < subcategories.length; j++) {
+                            subcategories[j].style.display = 'none';
+                        }
+                        previouslyClickedCategory = null;
+                        currentlyVisibleSubcategory = null;
+                        return; // Exit the function early
+                    }
+
+                    // Hide the previously visible subcategory if it's not the same as the new one
+                    if (currentlyVisibleSubcategory && currentlyVisibleSubcategory !== subcategories) {
+                        for (let j = 0; j < currentlyVisibleSubcategory.length; j++) {
+                            currentlyVisibleSubcategory[j].style.display = 'none';
+                        }
+                    }
+
+                    // Toggle the display of the new subcategory
+                    for (let j = 0; j < subcategories.length; j++) {
+                        if (subcategories[j].style.display == 'none' || subcategories[j].style.display == '') {
+                            subcategories[j].style.display = 'block';
+                        } else {
+                            subcategories[j].style.display = 'none';
+                        }
+
+                        // Add event listener to change background color when subcategory is clicked
+                        subcategories[j].addEventListener('click', (event) => {
+                            event.stopPropagation(); // Prevent the event from bubbling up to the category
+                            if (previouslyClickedSubcategory) {
+                                previouslyClickedSubcategory.classList.remove('highlighted-subcategory');
+                            }
+                            subcategories[j].classList.add('highlighted-subcategory');
+                            previouslyClickedSubcategory = subcategories[j];
+                        });
+                    }
+
+                    // Change background color of the clicked category
+                    if (previouslyClickedCategory) {
+                        previouslyClickedCategory.classList.remove('highlighted-category');
+                    }
+                    categories[i].classList.add('highlighted-category');
+                    previouslyClickedCategory = categories[i];
+
+                    // Update the reference to the currently visible subcategory
+                    currentlyVisibleSubcategory = subcategories;
+                });
+            }
+        }
+        // function clickCategory(element) {
+        //     let check = document.querySelectorAll(".hlo1");
+        //     console.log(check, "check")
+        //     for (let i = 0; i < check.length; i++) {
+        //         check[i].addEventListener('click', () => {
+        //             let subcategory = document.querySelectorAll(`.subcategory${i}`);
+
+        //             for (let j = 0; j < subcategory.length; j++) {
+        //                 if (subcategory[j].style.display == 'none') {
+        //                     subcategory[j].style.display = 'block'
+        //                 } else {
+        //                     subcategory[j].style.display = 'none'
+        //                 }
+
+        //             }
+        //         })
+        //     }
+        // }
+
+
+        function handleClick(element) {
+            var clickedValue = element.innerText;
+            element.style.backgroundColor = 'blue';
+            element.style.color = 'white';
+            console.log(clickedValue, "clicked value");
+
+            var previouslyClicked = document.querySelector('.clicked');
+            if (previouslyClicked) {
+                previouslyClicked.style.backgroundColor = 'white';
+                previouslyClicked.style.color = 'black';
+                previouslyClicked.classList.remove('clicked');
+            }
+            element.classList.add('clicked');
+        }
+
+        function feedbackPage() {
+            var elementToHandle = document.querySelector('.clicked');
+            console.log(elementToHandle);
+            if (elementToHandle) {
+                handleClick(elementToHandle);
+            }
+            // window.location.href = "http://localhost:3000/feedbackCategory";
+            window.location.href="/feedbackCategory";
+        }
+
+        clickCategory()
+
+        function backPage() {
+            window.location.href = "/orderlist";
+        }
+        function logout() {
+            // Any logout logic here, such as clearing session or tokens
+            console.log("Logging out");
+            
+            // Redirect to the route that renders home.ejs
+            window.location.href = "/home";
+        }
+
+        // function feedbackPage() {
+        //   window.location.href = "http://localhost:3000/feedbackCategory";
+        // }
+    </script>
+
+
+</body>
+
+</html>

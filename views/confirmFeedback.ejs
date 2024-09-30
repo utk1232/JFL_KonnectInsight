@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b55c257304.js" crossorigin="anonymous"></script>
+    <title>Dominos Feedback</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="confirm_container">
+            <div class="confirm_container_header">
+                <div style="text-align: left;">
+                    <span>Order No. <span id="orderno"></span></span>
+                    <br>
+                    <span>₹<span id="orderprice"></span> | <span id="orderitems"></span> items</span>
+                </div>
+                <div style="text-align: right;">
+                    <span>Reward Related Issue</span>
+                    <br>
+                    <span>Cold Product Received</span>
+                </div>
+            </div>
+            <hr />
+            <div class="confirm_container_body">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="../assets/form_submit_img.png" alt="image" width="200px" height="200px"
+                            style="margin-left: 54px;" />
+                        <p class="my-3">Thank you for registering your concern</p>
+                        <h6 class="my-2">Your service request no. is #6373560</h6>
+                        <p class="my-4">Our Guest Services representative will reach out to you within 24-48 Hours</p>
+                      </div>
+                </div>
+
+            </div>
+            <div class="confirm_container_footer">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary cust_submit_btn" type="button" onclick="submitClosebtn()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function handleLoad() {
+        let details = JSON.parse(sessionStorage.getItem("orderDetails"));
+        console.log(details);
+        document.getElementById('orderprice').innerText = details.price;
+        if (details.orderno == 0) {
+            document.getElementById('orderno').innerText = '';
+        } else {
+            document.getElementById('orderno').innerText = details.orderno;
+        }
+        document.getElementById('orderitems').innerText = details.itemNos;
+
+    }
+    document.addEventListener('DOMContentLoaded', handleLoad());
+
+    function submitClosebtn(){
+        // Redirect to the route that renders home.ejs
+        window.location.href = "/home";
+    }
+</script>
+
+</html>

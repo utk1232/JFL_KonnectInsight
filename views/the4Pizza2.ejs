@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href='/css/pizza.css'>
+  <style>
+    .child-6.selected {
+    background-color: #ccc; 
+    color: #000; 
+}
+  </style>
+</head>
+
+<body>
+  <div id="the4pizza1">
+    <div class="parent5">
+      <div class="inner-44">
+        <p class="innerchild-1">Please select what you want to give feedback for</p>
+
+        <div class="inner-45">
+          <div class="inner-46">
+            <p class="innerchild-2">The 4 Cheese Pizza + 7 other items</p>
+            <div class="inner-47">
+              <div class="innerchild-3">13 Jul 2023</div>
+              <div class="innerchild-3">₹1,671.00</div>
+            </div>
+          </div>
+          <button class="innerchild-4" onclick="backPage11()">Back to Order Selection</button>
+        </div>
+        <div class="inner-48">
+          <p class="innerchild-1">please enter the followingfeedback in the feedback</p>
+          <h2 class="innerchild-5">Order Delivery</h2>
+          <div class="inner-6" >
+            <p class="child-6" onclick="toggleBackgroundColor(this)">Taste</p>
+            <p class="child-6" onclick="toggleBackgroundColor(this)">Cheese & Topping</p>
+            <p class="child-6" onclick="toggleBackgroundColor(this)">Cold Product Received</p>
+          
+          </div>
+        </div>
+      </div>
+      <div class="inner-50">
+        <div class="inner-51">
+          <div class="inner-52" onclick="feedbackPage1()">Continue</div>
+          <!-- <img         
+                              src="../public/assets/image 4.png"
+                              class="img"
+          /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    
+
+    function toggleBackgroundColor(element) {
+ 
+    var allChild6Elements = document.querySelectorAll('.child-6');
+    allChild6Elements.forEach(function (el) {
+      el.classList.remove('selected');
+    });   
+    element.classList.add('selected');
+  }
+function feedbackPage1() {
+      window.location.href = 'submitForm';
+    }
+    function backPage11(){
+      window.location.href = '/the4CheesePizza';
+
+    }
+  </script>
+</body>
+
+</html>

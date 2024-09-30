@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/css/try2.css">
+</head>
+<body>
+    <div id="the4pizza">
+        <div class="parent1">
+            <div class="inner-1">
+                <p class="child-1">Please select what you want to give feedback for</p>
+                <div class="inner-2">
+                    <div class="inner-3">
+                        <p class="child-2">The 4 Cheese Pizza + 7 other items</p>
+                        <div class="inner-4">
+                            <div class="child-3">13 Jul 2023</div>
+                            <div class="child-3">₹1,671.00</div>
+                        </div>
+                    </div>
+                    <button class="child-4" onclick="backPage()">Back to Order Selection</button>
+                </div>
+                <div class="inner-5">
+                    <h2 class="child-5">Order Delivery</h2>
+                    <div class="inner-6" id="dynamicContainer2">
+
+                    </div>
+                </div>
+                <div class="inner-7">
+                    <h2 class="child-5">Product Quality</h2>
+                    <div class="inner-8" id="dynamicContainer3">
+                       
+                    </div>
+                </div>
+                <div class="inner-9">
+                    <h2 class="child-5">Wrong Order Delivered</h2>
+                    <div class="inner-10" id="dynamicContainer4">
+                    
+                    </div>
+                </div>
+                <div class="inner-11">
+                    <h2 class="child-5">Others</h2>
+                    <div class="inner-12" id="dynamicContainer5">
+                       
+                    </div>
+                </div>
+                <div class="inner-13">
+                    <div class="inner-14">
+                        <div class="inner-15" onclick="feedbackPage()">Continue</div>
+                        <!-- <img         
+                            src="../public/assets/image 4.png"
+                            class="img"
+                          /> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+     
+     function createChildElements(container, values) {
+            values.forEach(value => {
+                const childElement = document.createElement('p');
+                childElement.classList.add('child-6');
+                childElement.textContent = value;
+
+                childElement.addEventListener('click', function () {
+                    document.querySelectorAll('.child-6').forEach(child => {
+                        child.classList.remove('selected');
+                    });
+
+                    this.classList.add('selected');
+                });
+
+                container.appendChild(childElement);
+            });
+        }
+
+        const dynamicContainer = document.getElementById('dynamicContainer2');
+        const child6Values = ['Delivery Pending', 'Order Delivered Late', 'Subcategory'];
+        createChildElements(dynamicContainer, child6Values);
+
+        const dynamicContainer1 = document.getElementById('dynamicContainer3');
+        const child6Values1 = ['Taste ', 'Cheese & Topping ', 'Cold Product Received'];
+        createChildElements(dynamicContainer1, child6Values1);
+
+        const dynamicContainer2 = document.getElementById('dynamicContainer4');
+        const child6Values2 = ['Incomplete Order Delivered ', 'Wrong Order Delivered '];
+        createChildElements(dynamicContainer2, child6Values2);
+
+        const dynamicContainer3 = document.getElementById('dynamicContainer5');
+        const child6Values3 = ['Request Duplicate Bill ', 'Wrong Bill Received', 'Give Appreciation', 'Reward Related Issuess'];
+        createChildElements(dynamicContainer3, child6Values3);
+    </script>
+</body>
+
+</html>

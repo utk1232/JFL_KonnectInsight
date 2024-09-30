@@ -1,0 +1,1991 @@
+
+{
+  "status": "SUCCESS",
+  "filter": [
+    {
+      "filterKey": "orderType",
+      "filterValue": "All",
+      "displayText": "All"
+    },
+    {
+      "filterKey": "orderType",
+      "filterValue": "D",
+      "displayText": "Delivery"
+    },
+    {
+      "filterKey": "orderType",
+      "filterValue": "DINEIN",
+      "displayText": "Dine-In"
+    },
+    {
+      "filterKey": "orderType",
+      "filterValue": "TAKEAWAY",
+      "displayText": "Takeaway"
+    },
+    {
+      "filterKey": "orderType",
+      "filterValue": "CURB",
+      "displayText": "Drive-n-Pick"
+    },
+    {
+      "filterKey": "orderType",
+      "filterValue": "IRCTC",
+      "displayText": "IRCTC"
+    }
+  ],
+  "orders": [
+    {
+      "id": "66879f5236fb095a07978e82",
+      "orderId": "DPI6585R202407055547",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_DELIVERED",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720164172850,
+      "punchTimeStamp": 1720164172850,
+      "deliveryTimeStamp": 1720170956000,
+      "price": 707.52,
+      "tax": 35.3762,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 743,
+      "finalPrice": 742.9,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 707.52,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 35.3762,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 17.6881,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 17.6881,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 742.8962,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031436",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "123",
+        "customers_mobile": "9599903137",
+        "street_name": "4",
+        "area_level0": "Bhalswa Lake, Jahangirpura, Delhi, 110042",
+        "city_region": null,
+        "area_level2": "",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "_SV-Margherita",
+            "description": "_SV-Margherita",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0117",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 11.95,
+          "pricePerQty": 239,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 11.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        },
+        {
+          "itemId": null,
+          "product": {
+            "name": "VG2-1Peppy Paneer",
+            "description": "VG2-1Peppy Paneer",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0120",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 22.95,
+          "pricePerQty": 459,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 22.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 20,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "6687ba3436fb095a07978e93",
+      "orderId": "DPI6585R202407055564",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_CREATED",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720171053233,
+      "punchTimeStamp": 1720171053233,
+      "deliveryTimeStamp": null,
+      "price": 248.52,
+      "tax": 12.4262,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 261,
+      "finalPrice": 260.95,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 248.52,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 12.4262,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 6.2131,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 6.2131,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 260.9462,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031469",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "123",
+        "customers_mobile": "9599903137",
+        "street_name": "4",
+        "area_level0": "Bhalswa Lake, Jahangirpura, Delhi, 110042",
+        "city_region": null,
+        "area_level2": "",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "_SV-Margherita",
+            "description": "_SV-Margherita",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0117",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 11.95,
+          "pricePerQty": 239,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 11.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 37,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "6687bac036fb095a07978e95",
+      "orderId": "DPI6585R202407055566",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_PREPARING",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720171195740,
+      "punchTimeStamp": 1720171195740,
+      "deliveryTimeStamp": null,
+      "price": 257.52,
+      "tax": 12.8762,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 270,
+      "finalPrice": 270.4,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 257.52,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 12.8762,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 6.4381,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 6.4381,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 270.3962,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031472",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "123",
+        "customers_mobile": "9599903137",
+        "street_name": "14",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "Bhalswa Dairy",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "DST- Chocolate lava Cake      ",
+            "description": "DST- Chocolate lava Cake      ",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "CAKE02",
+            "menuCat": "MCT0005",
+            "sizeCode": ".",
+            "fmcg": false
+          },
+          "productType": "DESSERTS",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 5.45,
+          "pricePerQty": 109,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 5.45,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": false
+        },
+        {
+          "itemId": null,
+          "product": {
+            "name": "Red velvet lava cake",
+            "description": "Red velvet lava cake",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "CAKE03",
+            "menuCat": "MCT0005",
+            "sizeCode": ".",
+            "fmcg": false
+          },
+          "productType": "DESSERTS",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 6.95,
+          "pricePerQty": 139,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 6.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": false
+        }
+      ],
+      "orderNumber": 39,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "6687bb0036fb095a07978e96",
+      "orderId": "DPI6585R202407055567",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_DELIVERED",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720171258813,
+      "punchTimeStamp": 1720171258813,
+      "deliveryTimeStamp": 1720171381000,
+      "price": 258.52,
+      "tax": 12.9262,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 271,
+      "finalPrice": 271.45,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 258.52,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 12.9262,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 6.4631,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 6.4631,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 271.4462,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031473",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "123",
+        "customers_mobile": "9599903137",
+        "street_name": "14",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "Bhalswa Dairy",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "Pepper BBQ Chicken",
+            "description": "Pepper BBQ Chicken",
+            "baked": true,
+            "foodType": "Non-Veg",
+            "menuCode": "PIZ5119",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT07",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 12.45,
+          "pricePerQty": 249,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 12.45,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 40,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "6687bb2836fb095a07978e97",
+      "orderId": "DPI6585R202407055568",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_DELIVERED",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720171299067,
+      "punchTimeStamp": 1720171299067,
+      "deliveryTimeStamp": 1720171381000,
+      "price": 608.52,
+      "tax": 30.4262,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 639,
+      "finalPrice": 638.95,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 608.52,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 30.4262,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 15.2131,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 15.2131,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 638.9462,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031474",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "123",
+        "customers_mobile": "9599903137",
+        "street_name": "14",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "Bhalswa Dairy",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "Chicken Dominator",
+            "description": "Chicken Dominator",
+            "baked": true,
+            "foodType": "Non-Veg",
+            "menuCode": "PIZ5124",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 29.95,
+          "pricePerQty": 599,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 29.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 41,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "6687bb5a36fb095a07978e98",
+      "orderId": "DPI6585R202407055569",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_DELIVERED",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720171348893,
+      "punchTimeStamp": 1720171348893,
+      "deliveryTimeStamp": 1720171381000,
+      "price": 468.52,
+      "tax": 23.4262,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 492,
+      "finalPrice": 491.95,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 468.52,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 23.4262,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 11.7131,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 11.7131,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 491.9462,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031475",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "123",
+        "customers_mobile": "9599903137",
+        "street_name": "14",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "Bhalswa Dairy",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "VG1-1Farmhouse",
+            "description": "VG1-1Farmhouse",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0119",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 22.95,
+          "pricePerQty": 459,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 22.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 42,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "668f63979232287484ce8a03",
+      "orderId": "DPI6585R202407115709",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_OUT_FOR_DELIVERY",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720673168170,
+      "punchTimeStamp": 1720673168170,
+      "deliveryTimeStamp": null,
+      "price": 239,
+      "tax": 11.95,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 251,
+      "finalPrice": 250.95,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 239,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 11.95,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 5.975,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 5.975,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 250.95,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031740",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "1",
+        "customers_mobile": "9599903137",
+        "street_name": "9",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "_SV-Margherita",
+            "description": "_SV-Margherita",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0117",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 11.95,
+          "pricePerQty": 239,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 11.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 1,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "668f63d89232287484ce8a04",
+      "orderId": "DPI6585R202407115710",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_PREPARING",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720673234690,
+      "punchTimeStamp": 1720673234690,
+      "deliveryTimeStamp": null,
+      "price": 459,
+      "tax": 22.95,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 482,
+      "finalPrice": 481.95,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 459,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 22.95,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 11.475,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 11.475,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 481.95,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031744",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "1",
+        "customers_mobile": "9599903137",
+        "street_name": "9",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "VG1-1Farmhouse",
+            "description": "VG1-1Farmhouse",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0119",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 22.95,
+          "pricePerQty": 459,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 22.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 2,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "668f645d9232287484ce8a05",
+      "orderId": "DPI6585R202407115711",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_PREPARING",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720673366737,
+      "punchTimeStamp": 1720673366737,
+      "deliveryTimeStamp": null,
+      "price": 459,
+      "tax": 22.95,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 482,
+      "finalPrice": 481.95,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 459,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 22.95,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 11.475,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 11.475,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 481.95,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031746",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "1",
+        "customers_mobile": "9599903137",
+        "street_name": "9",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "VG2-1Peppy Paneer",
+            "description": "VG2-1Peppy Paneer",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0120",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 22.95,
+          "pricePerQty": 459,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 22.95,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 3,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    },
+    {
+      "id": "668f64a29232287484ce8a06",
+      "orderId": "DPI6585R202407115712",
+      "deliveryPhoneNumber": "9599903137",
+      "orderStatus": "ORDER_DELIVERED",
+      "orderCurrentState": 1,
+      "orderTimeStamp": 1720673436633,
+      "punchTimeStamp": 1720673436633,
+      "deliveryTimeStamp": 1720674308000,
+      "price": 549,
+      "tax": 27.45,
+      "charges": null,
+      "discount": 0,
+      "netPrice": 576,
+      "finalPrice": 576.45,
+      "paymentSummary": {
+        "fetchLoyaltyEarnPoints": null,
+        "loyaltyEarnPointsFetched": null,
+        "paymentSummaryItem": [
+          {
+            "label": "Sub Total",
+            "value": 549,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Discount",
+            "value": null,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          },
+          {
+            "label": "Taxes & Charges",
+            "value": 27.45,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": [
+              {
+                "label": "CGST",
+                "value": 13.725,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "SGST",
+                "value": 13.725,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              },
+              {
+                "label": "IGST",
+                "value": 0,
+                "hasChild": null,
+                "wallet": null,
+                "discount": null
+              }
+            ]
+          },
+          {
+            "label": "Grand Total",
+            "value": 576.45,
+            "hasChild": null,
+            "wallet": null,
+            "discount": null,
+            "childList": null
+          }
+        ]
+      },
+      "paymentResponse": {
+        "payments": []
+      },
+      "advanceOrderInProgress": null,
+      "cancellable": null,
+      "tentNumber": "cash-770031747",
+      "feedbackVariant": null,
+      "shouldShowFeedbackRating": null,
+      "refund": null,
+      "irctcOrder": false,
+      "advanceOrder": false,
+      "currentOrder": null,
+      "favourite": null,
+      "store": {
+        "orderId": null,
+        "addressLine": "POKHRA TEST RESTAURANT",
+        "name": "POKHRA TEST RESTAURANT",
+        "phoneNumber": null,
+        "id": "DPI6585R",
+        "orderDate": null,
+        "orderTime": null,
+        "priceZone": null,
+        "online": null,
+        "baseRegion": null,
+        "storeCity": null,
+        "city": null,
+        "region": null,
+        "postalCode": null,
+        "latitude": null,
+        "longitude": null,
+        "cityCode": null,
+        "showStoreStations": null
+      },
+      "userDetails": {
+        "mobile": "9599903137",
+        "firstName": "Dhruv",
+        "lastName": "Dhruv",
+        "email": null
+      },
+      "deliveryAddress": {
+        "building_number": "1",
+        "customers_mobile": "9599903137",
+        "street_name": "9",
+        "area_level0": "P5VC+MQ, Bhalswa Dairy, Bhalswa, Delhi, 110042, India",
+        "city_region": null,
+        "area_level2": "",
+        "area_level1": ".",
+        "city": null,
+        "country": null,
+        "longitude": null,
+        "latitude": null,
+        "formatted_address": null,
+        "address_type": "R",
+        "postal_code": "110032"
+      },
+      "source": {
+        "client": "ROI",
+        "source": null,
+        "apiClientTitle": null,
+        "userAgent": null,
+        "platform": "",
+        "rawStr": null,
+        "tenant": "INDIA",
+        "apiKey": null
+      },
+      "deliveryOrderType": {
+        "deliveryTypeCode": "D"
+      },
+      "items": [
+        {
+          "itemId": null,
+          "product": {
+            "name": "Feast Veg Extravanga",
+            "description": "Feast Veg Extravanga",
+            "baked": true,
+            "foodType": "Veg",
+            "menuCode": "PIZ0124",
+            "menuCat": "MCT0001",
+            "sizeCode": "BHT95",
+            "fmcg": false
+          },
+          "productType": "PIZZA",
+          "quantity": 1,
+          "taxPercentage": 5,
+          "taxAmount": 27.45,
+          "pricePerQty": 549,
+          "totalDiscount": 0,
+          "taxes": [
+            {
+              "amount": 27.45,
+              "labelName": "GST"
+            }
+          ],
+          "pizza": true
+        }
+      ],
+      "orderNumber": 4,
+      "orderRefundBlock": false,
+      "addedBy": null,
+      "aodDetails": null,
+      "mobinData": null,
+      "actualOrderDate": null,
+      "orderSavedTime": null,
+      "payNow": null,
+      "kitchenDisplayTime": null,
+      "prepaid": null,
+      "roundOff": null,
+      "commonTipAmount": null,
+      "riderTipAmount": null,
+      "insiderTipAmount": null,
+      "aggregatorGSTCalculation": null,
+      "digitalPayments": null,
+      "ccTxnDetails": null,
+      "timeServiceGuarantee": "20"
+    }
+  ],
+  "hasNext": true
+}
