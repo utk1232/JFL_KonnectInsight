@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #04489D;
+  background-color: #04489d;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom right;
@@ -10,14 +10,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-
 }
-.logoutClass{
-  margin-left:90%;
-  top:-9px;
+.logoutClass {
+  margin-left: 90%;
+  top: -9px;
 }
-.verifyButton{
- margin-left:25px;
+.verifyButton {
+  margin-left: 25px;
 }
 .card-header {
   display: flex;
@@ -38,13 +37,13 @@ body {
 }
 
 .card_header_bgColor {
-  background-color: #04489D;
+  background-color: #04489d;
 }
 
 .cust_btn {
   display: flex;
   width: 392px;
-    padding: 16px 24px;
+  padding: 16px 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -58,7 +57,7 @@ body {
   align-items: center;
   gap: 20px;
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -79,7 +78,7 @@ body {
   margin-right: 5px;
 }
 
-.cust_radio_btn~label {
+.cust_radio_btn ~ label {
   margin-top: 4px;
 }
 
@@ -135,7 +134,7 @@ p {
   align-items: center;
   gap: 24px;
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -211,7 +210,7 @@ img {
   margin-left: 5px;
 }
 
-.item-heading>div {
+.item-heading > div {
   margin-bottom: 0.5rem;
 }
 
@@ -221,7 +220,7 @@ img {
   margin-left: 5px;
 }
 
-.item-subheding>div {
+.item-subheding > div {
   margin-bottom: 0.5rem;
 }
 
@@ -446,11 +445,11 @@ input[type="checkbox"] {
   margin-top: 30px;
 }
 
-.selectItemsTag>input[type="checkbox"] {
+.selectItemsTag > input[type="checkbox"] {
   text-align: left;
 }
 
-.selectItemsTag>p {
+.selectItemsTag > p {
   text-align: right;
   margin-top: -25px;
 }
@@ -484,6 +483,39 @@ input[type="checkbox"] {
   height: 100vh;
 }
 
+.frame-4 {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+}
+
+.orderIndicator {
+  flex-direction: row;
+  align-self: center;
+  margin-left: auto; /* Pushes the arrow to the right */
+  font-size: 24px; /* Adjust size as needed */
+  line-height: 1; /* Ensure it's centered within its line height */
+}
+
+.cust_welcome_card {
+  width: 560px;
+  border: none;
+  height: 350px;
+  box-shadow: 0px 5px 20px 0px #d2dae3;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.employee-name {
+  margin: 0;
+  text-align: right;
+  color: #1b4d76;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+
 .cust_otp_card {
   width: 560px;
   border: none;
@@ -493,6 +525,7 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .cust_otp_card h6 {
@@ -562,7 +595,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .edit-num {
-  color: #04489D;
+  color: #04489d;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -572,7 +605,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .resend {
-  color: #326AF7;
+  color: #326af7;
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
@@ -591,7 +624,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .back-page {
-  color: #04489D;
+  color: #04489d;
   text-align: left;
   width: 100%;
   font-size: 16px;
@@ -618,7 +651,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   gap: 24px;
   border-radius: 20px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -629,7 +662,7 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: center;
   align-items: flex-start;
   border-radius: 16px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -640,7 +673,7 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  color: #04489D;
+  color: #04489d;
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
@@ -656,14 +689,14 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  color: #FFF;
+  color: #fff;
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   border-radius: 8px;
-  background: #55A157;
+  background: #55a157;
 }
 
 .choice-footer {
@@ -695,12 +728,12 @@ input[type="number"]::-webkit-outer-spin-button {
   flex: 1 0 0;
   align-self: stretch;
   border-radius: 8px 0px 0px 0px;
-  border: 2px solid #04489D;
-  background: #D6E4F5;
+  border: 2px solid #04489d;
+  background: #d6e4f5;
 }
 
 .choice-item {
-  color: #04489D;
+  color: #04489d;
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;

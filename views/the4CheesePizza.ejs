@@ -6,6 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>The 4 Cheese Pizza</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
     <link rel='stylesheet' type='text/css' media='screen' href='/css/the4CheesePizza.css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -49,26 +50,67 @@
             background-color: blue;
             color: white;
         }
+        .employee-name {
+            margin: 0;
+            text-align: right;
+            color: #1b4d76;
+            padding-bottom: 8px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
+    
     <div id="the4pizza">
         <div class="parent1">
             <div class="inner-1">
-                <div style="width: 100%; text-align:right;"  >    <button class="btn btn-danger" type="button" onclick="logout()">Logout</button></div>
+                <div
+              style="
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                width: 100%;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-end;
+                  margin-bottom: 25px;
+                "
+              >
+                <div class="employee-name"><%= empName %></div>
+                <div style="align-self: center">
+                  <button
+                    class="btn btn-danger"
+                    type="button"
+                    onclick="logout()"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
+            </div>
                 <p class="child-1">Please select what you want to give feedback for</p>
                 <div class="inner-2">
                     <div class="inner-3">
                         <p class="child-2"></p>
                         <div class="inner-4">
-                            <div class="child-3">13 Jul 2023</div>
-                            <div class="child-3">₹1,671.00</div>
+                                <div class="child-3" id="orderDetails">
+                                    <% orderDetails=JSON.parse(orderDetails)%>
+                                    <%let orderDate = new Date(orderDetails?.store?.orderDate); %>
+                                    <% orderDate=orderDate.toLocaleDateString();%>
+                                    <%= orderDate ? orderDate : 'N/A' %>
+                                </div>
+                                <div class="child-3">₹<%= orderDetails?.netPrice  ? orderDetails.netPrice : 'N/A' %></div>
                         </div>
                     </div>
                     <button class="child-4" onclick="backPage()">Back to Order Selection</button>
                 </div>
-                <div class="inner-5">
+                <div class="inner-5" >
+                    <!-- <% console.log(orders, "orders in the4cheesepizza ejs"); %> -->
                     <% if (orders.length> 0) { %>
                         <ul class="ul">
                             <% let count=0; %>
@@ -112,7 +154,7 @@
                             <% } %>
                 </div>
 
-                <div class="inner-13" id="continueButton" onclick="feedbackPage()">
+                <div class="inner-13" id="continueButton" onclick="feedbackPage(orderDetails)">
                     <div class="inner-14">
                         <div class="inner-15">Continue </div>
                         </div>
@@ -122,11 +164,14 @@
 
     </div>
     <script>
+        let currentlyVisibleSubcategory = null; 
+        let previouslyClickedCategory = null;
         function clickCategory() {
+            
             let categories = document.querySelectorAll(".hlo1");
             console.log(categories, "categories");
-            let currentlyVisibleSubcategory = null; // Variable to keep track of the currently visible subcategory
-            let previouslyClickedCategory = null; // Variable to keep track of the previously clicked category
+            // let currentlyVisibleSubcategory = null; // Variable to keep track of the currently visible subcategory
+            // let previouslyClickedCategory = null; // Variable to keep track of the previously clicked category
             let previouslyClickedSubcategory = null; // Variable to keep track of the previously clicked subcategory
 
             for (let i = 0; i < categories.length; i++) {
@@ -160,9 +205,8 @@
                             subcategories[j].style.display = 'none';
                         }
 
-                        // Add event listener to change background color when subcategory is clicked
                         subcategories[j].addEventListener('click', (event) => {
-                            event.stopPropagation(); // Prevent the event from bubbling up to the category
+                            event.stopPropagation(); 
                             if (previouslyClickedSubcategory) {
                                 previouslyClickedSubcategory.classList.remove('highlighted-subcategory');
                             }
@@ -171,14 +215,12 @@
                         });
                     }
 
-                    // Change background color of the clicked category
                     if (previouslyClickedCategory) {
                         previouslyClickedCategory.classList.remove('highlighted-category');
                     }
                     categories[i].classList.add('highlighted-category');
                     previouslyClickedCategory = categories[i];
 
-                    // Update the reference to the currently visible subcategory
                     currentlyVisibleSubcategory = subcategories;
                 });
             }
@@ -201,45 +243,104 @@
         //         })
         //     }
         // }
-
-
+      
+        let selectedSubCategory;
         function handleClick(element) {
-            var clickedValue = element.innerText;
+            let clickedValue = element.innerText;
             element.style.backgroundColor = 'blue';
             element.style.color = 'white';
-            console.log(clickedValue, "clicked value");
+           // console.log(clickedValue, "clicked value");
 
-            var previouslyClicked = document.querySelector('.clicked');
+            let previouslyClicked = document.querySelector('.clicked');
             if (previouslyClicked) {
                 previouslyClicked.style.backgroundColor = 'white';
                 previouslyClicked.style.color = 'black';
                 previouslyClicked.classList.remove('clicked');
             }
             element.classList.add('clicked');
+          //  selectedSubcategory = clickedValue;
+            console.log(currentlyVisibleSubcategory, "selected subcategory in the4cheesepizza ejs",previouslyClickedCategory.innerText);
+            
+             selectedSubCategory = Array.from(currentlyVisibleSubcategory).filter(element => element.classList.contains('clicked')).map(element => element.innerText);
+
+           
         }
 
-        function feedbackPage() {
-            var elementToHandle = document.querySelector('.clicked');
-            console.log(elementToHandle);
-            if (elementToHandle) {
-                handleClick(elementToHandle);
-            }
-            // window.location.href = "http://localhost:3000/feedbackCategory";
-            window.location.href="/feedbackCategory";
+        const orderDetails = <%- JSON.stringify(orderDetails) %>
+    console.log(orderDetails, "orderDetails from EJS");
+   // sessionStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+        function feedbackPage(orderDetails) {
+            const selectedCategory =previouslyClickedCategory.innerText;
+            selectedSubCategory = selectedSubCategory[0]; //to get string out of array
+    var elementToHandle = document.querySelector('.clicked');
+    console.log(elementToHandle,"elementToHandle");
+    
+    if (elementToHandle) {
+        handleClick(elementToHandle);
+    }
+   // const storedOrderDetails = JSON.parse(sessionStorage.getItem('orderDetails'));
+//console.log(orderDetails,"dataaaaaaaa");
+console.log(selectedSubCategory, "subcategory innertext");
+    fetch('/feedbackCategory', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({orderDetails, selectedCategory, selectedSubCategory})
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log(response, "feedbackPage function fetch response");
+            return response;
         }
+        throw new Error('Network response was not ok.');
+    })
+    .then(data => {
+        // Handle response data if needed
+        console.log(data);
+        // Redirect to the feedback category page
+        window.location.href = "/feedbackCategory"; 
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
 
         clickCategory()
 
         function backPage() {
             window.location.href = "/orderlist";
         }
-        function logout() {
-            // Any logout logic here, such as clearing session or tokens
-            console.log("Logging out");
-            
-            // Redirect to the route that renders home.ejs
-            window.location.href = "/home";
-        }
+
+        let isLoggedOut = false; 
+
+function logout() {
+    console.log("Logging out");
+
+    fetch('/logout', { method: 'POST' })
+        .then(response => {
+            if (response.ok) {
+                isLoggedOut = true;
+
+                window.history.replaceState(null, null, "/home");
+                window.location.href = "/home";
+            } else {
+                console.error("Logout failed:", response.statusText);
+            }
+        })
+        .catch(error => {
+            console.error("Error during logout:", error);
+        });
+}
+window.onpopstate = function () {
+    if (isLoggedOut) {
+        window.location.replace("/home");
+    }
+};
+
+
+
 
         // function feedbackPage() {
         //   window.location.href = "http://localhost:3000/feedbackCategory";
