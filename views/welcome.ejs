@@ -18,35 +18,19 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>
     <form method="POST" action="/orderlist">
-      <input type="hidden" name="empName" value="<%= empName %>" />
       <div
         class="container height-100 d-flex justify-content-center align-items-center"
         style="height: 120vh"
       >
         <div class="position-relative">
           <div class="card p-2 text-center cust_welcome_card">
-            <div
-              style="
-                display: flex;
-                justify-content: flex-end;
-                align-items: flex-start;
-                width: 100%;
-              "
-            >
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-end;
-                  margin-bottom: 25px;
-                  padding: 5px;
-                "
-              >
+            <div style="display: flex; justify-content: flex-end; align-items: flex-start; width: 100%;">
+              <div style="display: flex; flex-direction: column; align-items: flex-end; margin-bottom: 25px; padding: 5px;">
+                <input type="hidden" name="empName" value="<%= empName%>" />
                 <div class="employee-name"><%= empName %></div>
                 <div style="align-self: center">
                   <button
@@ -59,7 +43,6 @@
                 </div>
               </div>
             </div>
-
             <div class="welcome-message">
               <h3>Welcome to the Store</h3>
             </div>
@@ -72,7 +55,6 @@
                 id="phone"
                 class="inputs d-flex flex-row justify-content-center mt-10"
               >
-                <!-- Adjusting the size with width, height, padding, and font-size -->
                 <input
                   class="m-2 text-center form-control rounded"
                   type="tel"
@@ -82,19 +64,20 @@
                   maxlength="10"
                   required
                   autocomplete="off"
-                  style="
-                    width: 250px;
-                    height: 50px;
-                    padding: 10px;
-                    font-size: 1.5rem;
-                  "
+                  style="width: 250px; height: 50px; padding: 10px; font-size: 1.5rem;"
+                  oninput="validatePhoneNumber()"
                 />
+              </div>
+              <div id="errorMessage" style="color: red; display: none; margin-top: 5px;">
+                Please enter a valid 10-digit phone number.
               </div>
             </div>
             <div class="mt-4 verifyButton">
               <button
                 class="btn px-4 validate btn-success cust_btn"
+                id="proceedButton"
                 type="submit"
+                disabled
               >
                 Proceed to Order List
               </button>
@@ -105,12 +88,21 @@
     </form>
 
     <script>
-      // function phoneNumberCheck() {
-      //     const phoneInput = document.querySelector('input[name="mobileNumber"]');
-      //     const phoneNumber = phoneInput.value;
-      //     localStorage.setItem('phoneNumber', phoneNumber);
-      // }
-      let isLoggedOut = false;
+      function validatePhoneNumber() {
+        const phoneInput = document.getElementById("phoneNumber");
+        const proceedButton = document.getElementById("proceedButton");
+        const errorMessage = document.getElementById("errorMessage");
+
+        const phoneNumber = phoneInput.value;
+
+        if (phoneNumber.length === 10 && /^\d{10}$/.test(phoneNumber)) {
+          proceedButton.disabled = false; // Enable the button
+          errorMessage.style.display = "none"; // Hide error message
+        } else {
+          proceedButton.disabled = true; // Disable the button
+          errorMessage.style.display = "block"; // Show error message
+        }
+      }
 
       function logout() {
         console.log("Logging out");
@@ -118,9 +110,6 @@
         fetch("/logout", { method: "POST" })
           .then((response) => {
             if (response.ok) {
-              isLoggedOut = true;
-
-              window.history.replaceState(null, null, "/home");
               window.location.href = "/home";
             } else {
               console.error("Logout failed:", response.statusText);
@@ -130,11 +119,6 @@
             console.error("Error during logout:", error);
           });
       }
-      window.onpopstate = function () {
-        if (isLoggedOut) {
-          window.location.replace("/home");
-        }
-      };
     </script>
   </body>
 </html>

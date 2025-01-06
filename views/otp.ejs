@@ -74,12 +74,16 @@
   <body>
     <form method="POST" action="/welcome">
       <input type="hidden" name="empName" value="<%= empName %>" />
+
+      <div class="employee-name">
+        Welcome, <%= empName %>
+      </div>
       <div
         class="container height-100 d-flex justify-content-center align-items-center"
       >
         <div class="position-relative">
           <div class="card p-2 text-center cust_otp_card">
-            <div class="back-page">
+            <div class="back-page" onclick="pageBack()">
               <svg
                 style="margin-top: -4px"
                 width="8"
@@ -100,6 +104,7 @@
             <br />
             <div class="edit-num">
               <div class="notify">
+
                 <span>We have sent an OTP to ****8888</span>
                 <br />
                 <span>Please enter the OTP below</span>
@@ -108,6 +113,7 @@
                 id="otp"
                 class="inputs d-flex flex-row justify-content-center mt-2"
               >
+              
                 <input
                   class="m-2 text-center form-control rounded"
                   type="text"
@@ -157,7 +163,7 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="resend">Resend OTP</div>
+              <div class="resend"  id="resend-otp">Resend OTP</div>
               <div class="mt-4 verifyButton">
                 <button class="btn px-4 validate btn-success cust_btn">
                   Verify
@@ -184,6 +190,35 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <script>
+    document.getElementById("resend-otp").addEventListener("click", function() {
+      // Disable the button to prevent multiple clicks
+      this.disabled = true;
+      this.textContent = "Sending...";
+    
+      // Make an API request to resend OTP
+      axios.post("/resend-otp", {
+        mobileNo: "9113733326" // Use the actual mobile number from your backend or session
+      })
+      .then(response => {
+        // Successfully sent OTP
+        alert("OTP sent successfully!");
+        this.disabled = false;
+        this.textContent = "Resend OTP";  // Re-enable and reset button text
+      })
+      .catch(error => {
+        // Handle error
+        alert("Failed to send OTP. Please try again.");
+        this.disabled = false;
+        this.textContent = "Resend OTP";  // Re-enable and reset button text
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const error = "<%= typeof error !== 'undefined' ? error : '' %>";
+      if (error) {
+        showPopup(error);
+      }
+    });
+    
 
     document.addEventListener("DOMContentLoaded", function (event) {
       function OTPInput() {
@@ -217,6 +252,11 @@
       }
       OTPInput();
     });
+
+    function pageBack(){
+      window.location.href = "http://localhost:3000/home";
+    }
+    
     // Function to show the popup
     function showPopup(message) {
             document.getElementById('popup-message').innerText = message;
@@ -231,8 +271,8 @@
         }
 
         // Show the popup if there is an error message
-        <% if (typeof error !== 'undefined') { %>
+        <!-- <% if (typeof error !== 'undefined') { %>
           showPopup("<%= error.replace(/"/g, '&quot;') %>")
-        <% } %>
+        <% } %> -->
   </script>
 </html>
